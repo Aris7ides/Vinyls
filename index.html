@@ -4,18 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vinyls Record Store</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Pacifico&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+        
+        .bounce-in{
+            animation: bounce-in 2s ease 1;
+        }
+        @keyframes bounce-in {
+            0% {
+                opacity: 0;
+                transform: scale(.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% { transform: scale(.9); }
+            100% { transform: scale(1.1); }
+        }
+        
+        .bounce {
+            animation: bounce 2s ease 2;
+        }
+        @keyframes bounce {
+            70% { transform:translateY(0%); }
+            80% { transform:translateY(-15%); }
+            90% { transform:translateY(0%); }
+            95% { transform:translateY(-7%); }
+            97% { transform:translateY(0%); }
+            99% { transform:translateY(-3%); }
+            100% { transform:translateY(0); }
+        }
     </style>
 </head>
 
 <body>
     <header id="inicio" class="head-foot">
-        <img src="img/icono-creative.svg" alt="" id="icon1" class="icon-head">
-        <img src="img/icono-creative.svg" alt="" id="icon2" class="icon-head">
+        <img src="img/icono-creative.svg" alt="" id="icon1" class="icon-head bounce">
+        <img src="img/icono-creative.svg" alt="" id="icon2" class="icon-head bounce">
         <h1><a href="#">Kings of Vinyls</a></h1>
         <img src="img/bars.svg" alt="bars" class="bars-head">
         <nav class="head-foot">
@@ -31,12 +60,12 @@
 
     <main>
         <div id="newsletter">
-            <h2>Register now in our newsletter</h2>
+            <h2 class="bounce-in">Register now in our newsletter</h2>
             <br>
-            <form>
+            <form class="bounce-in">
                 <input type="email" alt="" placeholder="correo2000@gmail.com">
             </form>
-            <button>Sign up</button>
+            <button class="bounce-in">Sign up</button>
         </div>
     </main>
 

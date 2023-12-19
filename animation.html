@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animacion</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        svg {
+            width: 33%;
+            height: 33vh;
+        }
+
+        .loader {
+            animation: spin 1.5s infinite linear;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" circle">
+        <svg class="loader" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+            viewBox="0 0 512 512">
+            <path fill="#ffffff"
+                d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
+        </svg>
+        <h2>Wait a moment, you have been redirect to a web store</h2>
+    </div>
+</body>
+
+<script>
+    setTimeout(function (){window.location.href="./index.html"},5000);
+</script>
+
+</html>
